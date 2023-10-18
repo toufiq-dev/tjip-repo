@@ -12,7 +12,7 @@ public:
     int majorityElement(vector<int>& nums) {
         unordered_map<int, int> frequency;
 
-        for(int i = 0; i < nums.size(); i++) {
+        for(int i = 0; i < nums.size(); ++i) {
             if(frequency.count(nums[i]) == 0) frequency[nums[i]];
 
             frequency[nums[i]]++;
@@ -32,7 +32,7 @@ public:
         int candidate = -1, votes = 0;
 
         // find majority candidate
-        for(int i = 0; i < nums.size(); i++) {
+        for(int i = 0; i < nums.size(); ++i) {
             if(votes == 0) {
                 candidate = nums[i];
                 votes = 1;
@@ -48,7 +48,7 @@ public:
         // find if majority candidate appears more than ⌊n / 2⌋ times.
         int count = 0;
 
-        for(int i = 0; i < nums.size(); i++) {
+        for(int i = 0; i < nums.size(); ++i) {
             if(nums[i] == candidate)
                 count++;
         }

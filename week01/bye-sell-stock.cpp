@@ -11,7 +11,7 @@ public:
         int lowest = INT_MAX;
         int profit = 0;
 
-        for(int i = 0; i < prices.size(); i++) {
+        for(int i = 0; i < prices.size(); ++i) {
             lowest = min(lowest, prices[i]);
             profit = max(profit, prices[i] - lowest);
         }
