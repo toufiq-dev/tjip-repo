@@ -25,7 +25,7 @@ int main() {
     vector<int> arr = {2,7,11,15};
     int target = 9;
 
-    Solution sln;
+    Solution* sln = new Solution();
 
     vector<int> ans = sln.twoSum(arr, target);
 
