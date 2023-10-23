@@ -1,8 +1,3 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
-using namespace std;
-
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
@@ -25,14 +20,3 @@ public:
     }
 };
 
-int main() {
-    vector<int> stock_prices = {1,2,3,4,5};
-
-    Solution* sln = new Solution();
-
-    int ans = sln -> maxProfit(stock_prices);
-
-    cout << ans << endl;
-
-    return 0;
-}

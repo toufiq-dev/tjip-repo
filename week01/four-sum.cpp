@@ -1,8 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
-
 class Solution {
     public:
         // TC: O(N ^ 3)
@@ -48,24 +43,6 @@ class Solution {
             return quadruplets;
         }
 };
-
-int main() {
-    vector<int> arr = {1,0,-1,0,-2,2};
-    int target = 0;
-
-    Solution sln;
-
-    vector<vector<int>> ans = sln.fourSum(arr, target);
-
-    for(auto x : ans) {
-        for (auto y : x) {
-            cout << y << " ";
-        }
-        cout << endl;
-    }
-
-    return 0;
-}
 
 /*
     Given an array nums of n integers, 

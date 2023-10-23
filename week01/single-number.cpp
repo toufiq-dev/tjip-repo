@@ -1,7 +1,3 @@
-#include <iostream>
-#include <vector>
-using namespace std;
-
 class Solution {
 public:
     // TC: O(N)
@@ -16,15 +12,3 @@ public:
         return num;
     }
 };
-
-int main() {
-    vector<int> arr = {4,1,2,1,2};
-
-    Solution sln;
-
-    int ans = sln.singleNumber(arr);
-
-    cout << ans;
-
-    return 0;
-}

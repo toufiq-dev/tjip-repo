@@ -1,9 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <unordered_map>
-#include <cmath>
-using namespace std;
-
 class Solution {
 public:
     // Brute-force
@@ -60,15 +54,3 @@ public:
     }
 
 };
-
-int main() {
-    vector<int> arr = {6,6,6,7,7};
-
-    Solution sln;
-
-    int ans = sln.majorityElement2(arr);
-
-    cout << ans << endl;
-
-    return 0;
-}

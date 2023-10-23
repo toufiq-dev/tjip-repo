@@ -1,8 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <unordered_map>
-using namespace std;
-
 class Solution {
 public:
     // TC: O(N)
@@ -20,18 +15,3 @@ public:
         return {-1, -1};
     }
 };
-
-int main() {
-    vector<int> arr = {2,7,11,15};
-    int target = 9;
-
-    Solution* sln = new Solution();
-
-    vector<int> ans = sln.twoSum(arr, target);
-
-    for(int x : ans) {
-        cout << x << " ";
-    }
-
-    return 0;
-}

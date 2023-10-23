@@ -1,8 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
-
 class Solution {
     public:
         // TC: O(N ^ 2)
@@ -48,23 +43,6 @@ class Solution {
             return triplets;
         }
 };
-
-int main() {
-    vector<int> arr = {-1,0,1,2,-1,-4};
-
-    Solution sln;
-
-    vector<vector<int>> ans = sln.threeSum(arr);
-
-    for(auto x : ans) {
-        for (auto y : x) {
-            cout << y << " ";
-        }
-        cout << endl;
-    }
-
-    return 0;
-}
 
 /*
     Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] 

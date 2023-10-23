@@ -1,7 +1,3 @@
-#include <iostream>
-#include <vector>
-using namespace std;
-
 class Solution {
 public:
     // TC: O(N)
@@ -17,16 +13,3 @@ public:
         }
     }
 };
-
-int main() {
-    vector<int> arr = {0,1,0,3,12};
-
-    Solution sln;
-    sln.moveZeroes(arr);
-
-    for(auto x : arr) {
-        cout << x << " ";
-    }
-
-    return 0;
-}
