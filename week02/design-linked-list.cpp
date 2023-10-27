@@ -1,42 +1,26 @@
-const int DUMMY_VAL = 0;
-
 class MyLinkedList {
+    // TC: O(N)
+    // SC: O(N)
 public:
     class ListNode {
     public:
         int val;
         ListNode* next;
-        
-        ListNode() {
-            next = nullptr;
-        }
+        static const int DUMMY_VAL = 0;
 
-        ListNode(int _val = DUMMY_VAL) {
-            val = _val;
-            next = nullptr;
-        }
-
-        ListNode(int _val, ListNode* _next) {
-            val = _val;
-            next = _next;
-        }
+        ListNode(int _val = DUMMY_VAL, ListNode* _next = nullptr) : val(_val), next(_next) {}
     };
 
     int len;
     ListNode* dHead;
 
-    MyLinkedList() {
-        len = 0;
-        dHead = new ListNode(DUMMY_VAL);    
-    }
+    MyLinkedList() : len(0), dHead(new ListNode(ListNode::DUMMY_VAL)) {}
     
     int get(int index) {
         if(index < 0 || index >= len) return -1;
         ListNode* cHead = dHead -> next;
         
-        while(index --) {
-            cHead = cHead -> next;
-        }
+        while(index--) cHead = cHead -> next;
 
         return cHead -> val;
     }
@@ -53,9 +37,7 @@ public:
         if(index > len) return;
         ListNode* cHead = dHead;
 
-        while(index--) {
-            cHead = cHead -> next;
-        }
+        while(index--) cHead = cHead -> next;
 
         ListNode* block = new ListNode(val, cHead -> next);
         cHead -> next = block;
@@ -64,11 +46,9 @@ public:
     
     void deleteAtIndex(int index) {
         if(index < 0 || index >= len) return;
-         ListNode* cHead = dHead;
+        ListNode* cHead = dHead;
 
-        while(index--) {
-            cHead = cHead -> next;
-        }
+        while(index--) cHead = cHead -> next;
 
         ListNode* delete_candidate = cHead -> next;
         cHead -> next = cHead -> next -> next;
@@ -76,13 +56,3 @@ public:
         len--;
     }
 };
-
-/**
- * Your MyLinkedList object will be instantiated and called as such:
- * MyLinkedList* obj = new MyLinkedList();
- * int param_1 = obj->get(index);
- * obj->addAtHead(val);
- * obj->addAtTail(val);
- * obj->addAtIndex(index,val);
- * obj->deleteAtIndex(index);
- */
