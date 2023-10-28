@@ -1,5 +1,7 @@
 class Solution {
 public:
+    // TC: O(N ^ 2)
+    // SC: O(1)
     void addAtTail(ListNode*& dHead, int val) {
         auto newNode = new ListNode(val);
         dHead -> next = newNode;
