@@ -16,9 +16,9 @@ public:
         current = head;
         while (current) {
             Node* copyNode = nodeMap[current];
-            copyNode->next = nodeMap[current->next];
-            copyNode->random = nodeMap[current->random];
-            current = current->next;
+            copyNode -> next = nodeMap[current -> next];
+            copyNode -> random = nodeMap[current -> random];
+            current = current -> next;
         }
 
         return nodeMap[head];
