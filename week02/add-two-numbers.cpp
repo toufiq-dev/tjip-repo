@@ -5,7 +5,7 @@ public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         int sum = 0, carry = 0;
         ListNode* dummy = new ListNode(); 
-        ListNode* current = dummy;
+        auto current = dummy;
 
         while (l1 || l2 || carry) {
             int x = l1 ? l1 -> val : 0;
