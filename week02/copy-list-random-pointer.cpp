@@ -7,7 +7,7 @@ public:
 
         unordered_map<Node*, Node*> nodeMap;
 
-        Node* current = head;
+        auto current = head;
         while (current) {
             nodeMap[current] = new Node(current -> val);
             current = current -> next;
@@ -15,7 +15,7 @@ public:
         
         current = head;
         while (current) {
-            Node* copyNode = nodeMap[current];
+            auto copyNode = nodeMap[current];
             copyNode -> next = nodeMap[current -> next];
             copyNode -> random = nodeMap[current -> random];
             current = current -> next;
