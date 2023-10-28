@@ -8,18 +8,18 @@ public:
         ListNode* current = dummy;
 
         while (l1 || l2 || carry) {
-        int x = l1 ? l1 -> val : 0;
-        int y = l2 ? l2 -> val : 0;
-                
-        sum = x + y + carry;
-        carry = sum / 10; 
-        sum %= 10;
+            int x = l1 ? l1 -> val : 0;
+            int y = l2 ? l2 -> val : 0;
+                    
+            sum = x + y + carry;
+            carry = sum / 10; 
+            sum %= 10;
 
-        current -> next = new ListNode(sum);
-        current = current -> next;
+            current -> next = new ListNode(sum);
+            current = current -> next;
 
-        if (l1) l1 = l1 -> next;
-        if (l2) l2 = l2 -> next;
+            if (l1) l1 = l1 -> next;
+            if (l2) l2 = l2 -> next;
         }
 
         return dummy -> next; 
