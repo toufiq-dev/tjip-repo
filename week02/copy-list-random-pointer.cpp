@@ -3,8 +3,6 @@ public:
     // TC: O(N)
     // SC: O(N)
     Node* copyRandomList(Node* head) {
-        if (!head) return nullptr;
-
         unordered_map<Node*, Node*> nodeMap;
 
         auto current = head;
