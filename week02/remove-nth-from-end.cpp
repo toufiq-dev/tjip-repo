@@ -1,6 +1,6 @@
 class Solution {
 public:
-    // TC: O(N) here N is 
+    // TC: O(N) where N is |ListNode|
     // SC: O(1)
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         auto slow = new ListNode(0, head);
