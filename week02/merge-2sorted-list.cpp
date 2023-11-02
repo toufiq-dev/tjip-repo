@@ -1,6 +1,6 @@
 class Solution {
 public:
-    // TC: O(N)
+    // TC: O(N) where N = |list1| / |list2|
     // SC: O(1)
     void addAtTail(ListNode*& dHead, int val) {
         auto newNode = new ListNode(val);

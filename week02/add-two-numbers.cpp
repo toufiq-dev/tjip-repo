@@ -1,6 +1,6 @@
 class Solution {
 public:
-    // TC: O(N), here N = |l1| / |l2|
+    // TC: O(N), where N = |l1| + |l2|
     // SC: O(1) 
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         int sum = 0, carry = 0;
