@@ -1,5 +1,5 @@
 class MyLinkedList {
-    // TC: O(N)
+    // TC: O(N) here N = |ListNode|
     // SC: O(N)
 public:
     class ListNode {
