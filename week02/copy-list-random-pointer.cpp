@@ -1,6 +1,6 @@
 class Solution {
 public:
-    // TC: O(N) here N = |list|
+    // TC: O(N) here N = |Node|
     // SC: O(N) here N = |nodeMap|
     Node* copyRandomList(Node* head) {
         unordered_map<Node*, Node*> nodeMap;

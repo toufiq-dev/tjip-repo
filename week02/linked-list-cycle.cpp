@@ -1,6 +1,6 @@
 class Solution {
 public:
-    // TC: O(N)
+    // TC: O(N) here N = |ListNode|
     // SC: O(1)
     bool hasCycle(ListNode *head) {
         auto slow = head;
