@@ -1,5 +1,5 @@
 class Solution {
-    // TC: O(|s| + |word| * logs)
+    // TC: O(|s| + |word| * log(s))
     // SC: O(1)
 private:
     vector<int> index_of[26];
