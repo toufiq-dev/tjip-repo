@@ -3,14 +3,15 @@ class Solution {
     // SC: O(1)
 private:
     vector<int> index_of[26];
-    bool isSubSeq(string &s, string &ref) {
-        int last = -1;
+    bool isSubSeq(string &ref) {
+        int last_index = -1;
         for(int i = 0; i < ref.size(); i++) {
             int ord = ref[i] - 'a';
-            int next = upper_bound(index_of[ord].begin(), index_of[ord].end(), last) - index_of[ord].begin();
-            if(next == index_of[ord].size()) return false;
-            last = index_of[ord][next];
+            int next_index = upper_bound(index_of[ord].begin(), index_of[ord].end(), last_index) - index_of[ord].begin();
+            if(next_index == index_of[ord].size()) return false;
+            last_index = index_of[ord][next_index];
         }
+        
         return true;
     }
 public:
@@ -21,7 +22,7 @@ public:
 
         int count = 0;
         for(auto &word : words) {
-            count += isSubSeq(s, word);
+            count += isSubSeq(word);
         }
 
         return count;
