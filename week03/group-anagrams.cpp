@@ -1,7 +1,7 @@
 class Solution {
 public:
-    // TC: O(n * k * log(k)), where n is the number of input strings and k is the average length of strings.
-    // SC: O(N) where, N = length of result + groups
+    // TC: O(S log(L)), where S = total number of chars and L is the average length of each string.
+    // SC: O(S)
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
         vector<vector<string>> result;
         unordered_map<string, vector<string>> groups;
