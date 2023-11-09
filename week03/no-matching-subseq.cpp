@@ -1,5 +1,5 @@
 class Solution {
-    // TC: O(|s| + |words| * avg. len of each word * log(s))
+    // TC: O(|s| + W log|s|) where, W = total number of chars in all strings from words.
     // SC: O(1)
 private:
     vector<int> index_of[26];
