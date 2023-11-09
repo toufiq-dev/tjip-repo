@@ -1,5 +1,5 @@
 class Solution {
-    // TC: O(|s| + |word| * log(s))
+    // TC: O(|s| + |words| * avg. len of each word * log(s))
     // SC: O(1)
 private:
     vector<int> index_of[26];
