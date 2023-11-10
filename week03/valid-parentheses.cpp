@@ -1,17 +1,24 @@
 class Solution {
 public:
-    // TC: O(N) where, N = |s|
-    // SC: O(N)
+    // TC: O(N) where N = |s|
+    // SC: O(N) where N = |s|
     bool isValid(string s) {
         stack<char> stk;
-        for(auto &c : s) {
-            if(c == '(' || c == '{' || c == '[') stk.push(c);
-            else {
-                if(stk.empty()) return false;
-                auto top = stk.top();
-                stk.pop();
-                if((c == ')' && top != '(') || (c == '}' && top != '{') || (c == ']' && top != '['))
+        unordered_map<char, char> bracketMap = {
+            {')', '('},
+            {'}', '{'},
+            {']', '['}
+        };
+
+        for (auto &c : s) {
+            if (bracketMap.count(c)) {
+                char topElement = stk.empty() ? '#' : stk.top();
+                if (topElement != bracketMap[c]) {
                     return false;
+                }
+                stk.pop();
+            } else {
+                stk.push(c);
             }
         }
 
