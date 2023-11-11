@@ -4,18 +4,19 @@ public:
     // SC: O(1)
     string longestCommonPrefix(vector<string>& strs) {
         auto prefix = strs[0];
-        
-        for (auto &str : strs) {
-            int i = 0;
-            while (i < prefix.size() && i < str.size() && prefix[i] == str[i]) {
-                i++;
+
+        for (int i = 1; i < strs.size(); ++i) {
+            int j = 0;
+            while (j < prefix.size() && j < strs[i].size() && prefix[j] == strs[i][j]) {
+                ++j;
             }
-            prefix = prefix.substr(0, i); 
+            prefix = prefix.substr(0, j); 
+
             if (prefix.empty()) {
                 break; 
             }
         }
-        
+
         return prefix;
     }
 };
