@@ -13,11 +13,10 @@ public:
         for (auto &c : s) {
             if (bracketMap.count(c)) {
                 char topElement = stk.empty() ? '#' : stk.top();
-                if (topElement != bracketMap[c]) {
-                    return false;
-                }
+                if (topElement != bracketMap[c]) return false;
                 stk.pop();
-            } else {
+            } 
+            else {
                 stk.push(c);
             }
         }
