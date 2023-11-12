@@ -7,8 +7,8 @@ public:
         int pt2 = 0;
         while(pt1 < haystack.size() && pt2 < needle.size()) {
             if(haystack[pt1] == needle[pt2]) {
-                pt1++;
-                pt2++;
+                ++pt1;
+                ++pt2;
                 if(pt2 == needle.size()) return pt1 - needle.size();
             }
             else {
