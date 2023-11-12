@@ -1,25 +1,20 @@
 class Solution {
 public:
-    // TC: O(k log k + k * max_len) where, k is the number of replacement operations.
-    // SC: O(k)
+    // TC: O(N*M), where N = |s|, and M = max(|sources[i]|) 
     string findReplaceString(string s, vector<int>& indices, vector<string>& sources, vector<string>& targets) {
-        vector<pair<int, int>> sortedIndices;
-    
         for (int i = 0; i < indices.size(); ++i) {
-            sortedIndices.push_back({indices[i], i});
-        }
-        
-        sort(sortedIndices.rbegin(), sortedIndices.rend());
 
-        for (auto& entry : sortedIndices) {
-            int index = entry.first;
-            int i = entry.second;
-
+            int idx = indices[i];
             string source = sources[i];
-            string target = targets[i];
 
-            if (s.substr(index, source.size()) == source) {
-                s = s.substr(0, index) + target + s.substr(index + source.size());
+            if (s.substr(idx, source.size()) == source) {
+                s.replace(idx, source.size(), targets[i]);
+
+                for (int j = i + 1; j < indices.size(); ++j) {
+                    if (indices[j] > idx) {
+                        indices[j] += targets[i].size() - source.size();
+                    }
+                }
             }
         }
 
