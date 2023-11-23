@@ -1,5 +1,7 @@
 class Solution {
 public:
+    // TC: O(1)
+    // SC: O(1)
     int romanToInt(string s) {
         unordered_map<string, int> roman;
         roman = {
