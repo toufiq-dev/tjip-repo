@@ -1,5 +1,7 @@
 class Solution {
 public:
+    // TC: O(n), n = no. of nodes
+    // SC: O(n)
     vector<TreeNode*> findDuplicateSubtrees(TreeNode* root) {
         unordered_map<string, int> subtreeCount;  
         unordered_set<TreeNode*> result;  
