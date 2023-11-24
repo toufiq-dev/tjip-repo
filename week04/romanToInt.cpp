@@ -13,13 +13,14 @@ public:
             {"D", 500},
             {"M", 1000},
         };
+
         int sum = 0;
         for (int i = 0; i < s.size(); ++i) {
             string current = s.substr(i, 1);
             string next = s.substr(i + 1, 1);
-            cout << current << "    " << next << endl;
             int digit = roman[current];
             int nextDigit = roman[next];
+            
             if(digit < nextDigit) {
                 digit = nextDigit - digit;
                 ++i;
@@ -31,4 +32,3 @@ public:
         return sum;
     }
 };
-

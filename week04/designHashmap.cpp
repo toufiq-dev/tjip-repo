@@ -10,6 +10,9 @@ private:
             next = nxt;
         }
     };
+    // TC: put, get, remove all have O(n), where, n = no. of keys in hash table
+    // and avg case Θ(1)
+    // SC: O(1)  
 public:
     const static int CAPACITY = 128;
     const static int BASE = 997;

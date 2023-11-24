@@ -1,5 +1,7 @@
 class LRUCache {
 public:
+    // TC: both get and put has O(1) average time complexity, O(n) worst case
+    // SC: O(n), where n is the number of keys in the cache
     LRUCache(int capacity) {
         cap = capacity;    
     }
