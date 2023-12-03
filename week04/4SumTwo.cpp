@@ -9,7 +9,7 @@ public:
                 pair_sum[i + j]++;
             }
         }
-        cout << pair_sum[-2];
+        
         int count = 0;
         for (int i : nums3) {
             for (int j : nums4) {
