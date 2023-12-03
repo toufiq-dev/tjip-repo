@@ -33,9 +33,9 @@ public:
         int slotID = calculateHash(key);
         auto node = _lists[slotID];
         while(node) {
-            if (node -> key == key) {
+            if (node -> key == key) 
                 return node -> value;
-            }
+            
             node = node -> next;
         }
         return -1;
