@@ -10,7 +10,7 @@ private:
             next = nxt;
         }
     };
-    // TC: put, get, remove all have O(n), where, n = no. of keys in hash table
+    // TC: put, get, remove all have O(n), where, n = size of linked list when when all keys hash to the same slot
     // and avg case Θ(1)
     // SC: O(1)  
 public:
