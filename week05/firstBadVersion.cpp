@@ -1,5 +1,7 @@
 class Solution {
 public:
+    // TC: O(log n)
+    // SC: O(1)
     int firstBadVersion(int n) {
         int L = 1, R = n;
         while(L < R) {

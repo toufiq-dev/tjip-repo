@@ -1,6 +1,7 @@
 class Solution {
 public:
     // TC: O(log(m * n)), m x n integer matrix
+    // SC: O(1)
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
         int m = matrix.size();
         int n = matrix[0].size();
