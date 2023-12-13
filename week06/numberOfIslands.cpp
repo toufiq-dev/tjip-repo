@@ -2,6 +2,8 @@ int dx[] = {+0, +0, +1, -1};
 int dy[] = {+1, -1, +0, +0};
 class Solution {
 public:
+    // TC: O(n * m) where n = |columns|, m = |rows|
+    // SC: O(n * m)
     void dfs(int ux, int uy, vector<vector<char>>& grid) {
         grid[ux][uy] = '0';
         for(int i = 0; i < 4; ++i) {
