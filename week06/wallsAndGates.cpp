@@ -13,9 +13,9 @@ public:
                 }
             }
         }
+        static vector<int> dir = {1, 0, -1, 0, 1};
         while(!Q.empty()) {
             auto u = Q.front(); Q.pop();
-            vector<int> dir = {1, 0, -1, 0, 1};
             for(int i = 0; i < 4; ++i) {
                 int vr = u.first + dir[i];
                 int vc = u.second + dir[i + 1];
