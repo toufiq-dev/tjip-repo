@@ -11,26 +11,26 @@ public:
         }
 
         queue<int> q;
-        for (int i = 0; i < numCourses; i++) {
+        for (int i = 0; i < numCourses; ++i) {
             if (indegree[i] == 0) {
                 q.push(i);
             }
         }
 
-        int nodesVisited = 0;
+        int visitedNodes = 0;
         while (!q.empty()) {
             int node = q.front();
             q.pop();
-            nodesVisited++;
+            visitedNodes++;
 
             for (auto& neighbor : adj[node]) {
-                indegree[neighbor]--;
+                --indegree[neighbor];
                 if (indegree[neighbor] == 0) {
                     q.push(neighbor);
                 }
             }
         }
 
-        return nodesVisited == numCourses;
+        return visitedNodes == numCourses;
     }
 };
