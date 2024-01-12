@@ -2,17 +2,13 @@ class Trie {
 public:
     class Node {
     public: 
-        const static int MAX_CHAR = 26;
         int cnt;
         bool isEnd;
-        Node* next[MAX_CHAR];
+        unordered_map<int, Node*> next;
 
         Node() {
             cnt = 0;
             isEnd = false;
-            for(int i = 0; i < MAX_CHAR; i++) {
-                next[i] = nullptr;
-            }
         }
     };
 
