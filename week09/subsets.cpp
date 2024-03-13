@@ -1,7 +1,7 @@
 class Solution {
 public:
-    // TC: O(2^N) N = |nums|
-    // SC: O(N)
+    // TC: O(N * 2^N) N = |nums|
+    // SC: O(N * 2^N)
     vector<vector<int>> subsets(vector<int>& nums) {
         subset.clear();
         result.clear();
